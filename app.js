@@ -6,7 +6,8 @@
 
  app.set('views', path.join(__dirname, 'views'));  
  app.set('view engine', 'hbs'); 
- app.set(express.static('public')); 
+ app.use(express.static('public')); 
+ 
  app.use('/random-country', (req, res) => {
     const { country_name } = data[Math.round(Math.random() * data.length)]; 
     return res.json({ country_name })
