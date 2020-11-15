@@ -3,7 +3,7 @@ const loadRandomName = (resultDiv) => {
     .then(response => response.json())
     .then(result => {
       resultDiv.classList.add('alert', 'alert-success')
-      resultDiv.innerHTML = `<h2>${result.country}</h2>`;
+      resultDiv.innerHTML = `<h2>${result.country_name} </h2>`;
     });
 };
   
