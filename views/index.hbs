@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Country Generator</title>
+    <title>Travel Destination Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Random Country Generator</h1>
-    <div class="result"></div>
-    <button id="generate">Get Travel Location</button>
-    <script src="../public/app.js"></script>
+    <div class="container">
+        <h1>Travel Destination Generator</h1>
+        <div class="result"></div>
+        <button class="btn btn-primary" id="generate">Get Travel Location</button>
+    </div>
+    <script src="./app.js"></script>
     <script>
-        const resultDiv = document.querySelector('.result'); 
+        const resultDiv = document.querySelector('.result');
         const generateBtn = document.querySelector('#generate')
         generateBtn.addEventListener('click', () => {
-            loadCountryName(resultDiv)
-        })
+            loadRandomName(resultDiv)
+        });  
     </script>
 </body>
 </html>
