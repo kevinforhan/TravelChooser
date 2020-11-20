@@ -9,9 +9,9 @@
  app.use(express.static('public')); 
  
  app.use('/random-country', (req, res) => {
-    const { country_name } = data[Math.round(Math.random() * data.length)];
+    const { country_name }= data[Math.round(Math.random() * data.length)];
     const { time_zone } = data[Math.round(Math.random() * data.length)];
-    return res.json({country_name, time_zone})
+    return res.json({ country_name, time_zone})
  });  
 
   app.use('/', (req, res) => {
